@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 @Entity
 @Table(name = "favourite")
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@NoArgsConstructor
 public class Favourite {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

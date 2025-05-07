@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 @Table(name = "media")
@@ -12,6 +13,7 @@ import lombok.experimental.FieldDefaults;
 @Data
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@NoArgsConstructor
 public class Media {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

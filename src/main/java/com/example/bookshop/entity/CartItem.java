@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 @Entity
@@ -11,6 +12,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Table(name = "cart_item")
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@NoArgsConstructor
 public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
