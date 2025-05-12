@@ -39,23 +39,23 @@ public class User {
     @Column
     LocalDate dob;
 
-    @Column
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    Rank rank;
+    Rank rank = Rank.BRONZE;
 
-    @Column
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    Role role;
+    Role role = Role.USER;
 
-    @Column
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    Gender gender;
+    Gender gender = Gender.MALE;
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne
     @JoinColumn(name = "cart_id")
     Cart cart;
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne
     @JoinColumn(name = "favourite_id")
     Favourite favourite;
 
